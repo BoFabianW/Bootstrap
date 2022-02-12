@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <title>Navbar, Scrollspy</title>
+</head>
+
+<!-- Das Element mit data-bs-spy="scroll" MUSS position-relative sein um richtig zu funktionieren 
+     1. data-bs-spy="scroll"   = Beobachtet das Scrollen 
+     2. data-bs-target="#menu" = Verbindet den Scrollbereich mit dem Element 
+     3. data-bs-offset         = Gibt an, ab wieviel Pixeln von oben das Element die Navigation aktualisiert -->   
+<body class="position-relative pt-4" data-bs-spy="scroll" data-bs-target="#menu" data-bs-offset="400">
+
+    <!--
+        1. navbar           = formatiert die Navbar in eine Flexbox und setzt margin und padding
+        2. navbar-expand    = Zeigt ab Breakpoint die normale Navigation an - Burger wird ausgeblendet
+        3. navbar-light     = Textfarbe in der Navbar
+        4. bg-light         = Hintergrundfarbe der Navbar
+    -->
+    <nav id="menu" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container py-3"> <!-- py-3 = Padding (top, bottom) innerhalb der Navbar -->
+        
+            <!-- 1. d-flex              = Flexbox
+                 2. align-items-center  = Platziert die Elemente vertikal zentriert
+            -->
+        <div class="d-flex align-items-center">
+            <img class="me-3" src="https://www.drupal.org/files/project-images/bootstrap-stack.png" alt="" style="width: 60px;">
+
+            <!-- Formatiert den Text des Links-->
+            <a class="navbar-brand fs-3" href="#">Webdesigner</a>
+        </div>
+          
+          <!--
+              1. navbar-toggler             = Design des Buttons
+              2. data-bs-toggle="collapse"  = Klappt Element ein und aus
+              3. data-bs-target             = Gibt das Element an, welches ein- und ausgeklappt werden soll
+              4. type"button"               = Gibt an, dass es sich um einen normalen Button handelt
+          -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+            <!-- navbar-toggler-icon = Zeigt das Burger-Icon an -->
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <!--
+              1. collapse            = Element ist standardmäßig eingeklappt
+              2. navbar-collapse     = Elemente werden formatiert untereinander angezeigt
+              3. justify-content-end = Platziert das Element ganz rechts
+          -->
+          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+              
+            <!-- 1. navbar-nav      = formatiert die Liste
+                 2. text-uppercase  = formatiert den Text in Großbuchstaben
+                 3. mt-4            = setzt einen margin-top mit dem Wert 5
+                 4. mt-lg-0         = setzt ab Breakpoint lg den margin-top auf 0
+            -->
+            <ul class="navbar-nav text-uppercase mt-4 mt-lg-0">     
+              <!-- 
+                  1. nav-item = formatiert die Listenelemente
+                  2. me-4     = Setzt einen margin-right mit Wert 4
+              -->
+              <li class="nav-item me-4">
+
+                <!-- nav-link = formatiert die Links in der Navbar -->
+                <a class="nav-link active" href="#home">Home</a>
+              </li>
+
+              <li class="nav-item me-4">
+                <a class="nav-link" href="#bilder">Bilder</a>
+              </li>
+
+              <li class="nav-item me-4">
+                <a class="nav-link" href="#referenzen">Referenzen</a>
+              </li>
+
+              <li class="nav-item me-4">
+                <a class="nav-link" href="#mich">Über mich</a>
+              </li>
+
+              <!-- dropdown = Positioniert das Dropdown-Menü unterhalb des Listeneintrages -->
+              <li class="nav-item me-4 dropdown">
+                
+                <!-- 
+                    1. dropdown-toggle              = Zeigt das Symbol für das Dropdown-Menü an
+                    2. data-bs-toggle="dropdown"    = Klappt Dropdown-Menü ein und aus
+                -->
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                  Was ich biete
+                </a>
+
+                <!-- formatiert das Dropdown-Menü und blendet es standardmäßig aus -->
+                <ul class="dropdown-menu">
+                  
+                  <!-- dropdown-item = formatiert die Listeneinträge des Dropdown-Menüs -->
+                  <li><a class="dropdown-item" href="#js">JavaScript</a></li>
+                  <li><a class="dropdown-item" href="#hc">HTML und CSS</a></li>
+                  <li><a class="dropdown-item" href="#java">Java-SE und Java-EE</a></li>
+                  
+                  <!-- dropdown-devider = Abgrenzugsstrich -->
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#bs">Bootstrap 5</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Content -->
+      <div class="container bg-dark mt-5 text-white fs-2 d-flex justify-content-center align-items-center" style="height: 600px;">
+        <h1 id="home">Home</h1>
+      </div>
+
+      <div class="container bg-dark mt-5 text-white fs-2 d-flex justify-content-center align-items-center" style="height: 600px;">
+        <h1 id="bilder">Bilder</h1>
+      </div>
+
+      <div class="container bg-dark mt-5 text-white fs-2 d-flex justify-content-center align-items-center" style="height: 600px;">
+        <h1 id="referenzen">Referenzen</h1>
+      </div>
+
+      <div class="container bg-dark mt-5 text-white fs-2 d-flex justify-content-center align-items-center" style="height: 600px;">
+        <h1 id="mich">Über mich</h1>
+      </div>
+
+      <div class="container bg-dark mt-5 text-white fs-2 d-flex justify-content-center align-items-center" style="height: 600px;">
+        <h1 id="js">JavaScript</h1>
+      </div>
+
+      <div class="container bg-dark mt-5 text-white fs-2 d-flex justify-content-center align-items-center" style="height: 600px;">
+        <h1 id="hc">HTML und CSS</h1>
+      </div>
+
+      <div class="container bg-dark mt-5 text-white fs-2 d-flex justify-content-center align-items-center" style="height: 600px;">
+        <h1 id="java">Java</h1>
+      </div>
+
+      <div class="container bg-dark mt-5 text-white fs-2 d-flex justify-content-center align-items-center" style="height: 600px;">
+        <h1 id="bs">Bootstrap 5</h1>
+      </div>
+
+    <!-- Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

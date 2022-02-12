@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Typography</title>
+  </head>
+  <body>
+
+    <div class="container">
+        <h1>Typography</h1>
+
+        <hr><br><br>
+
+        <h2>Headings:</h2>
+        <br>
+
+        <h3>Überschriften mit HTML-Tag</h3>
+        <br>
+
+        <h1>Überschrift H1</h1>
+        <h2>Überschrift H2</h2>
+        <h3>Überschrift H3</h3>
+        <h4>Überschrift H4</h4>
+        <h5>Überschrift H5</h5>
+        <h6>Überschrift H6</h6>
+
+        <br><br>
+
+        <h3>Überschriften mit Bootstrap-Klassen</h3>
+        <br>
+
+        <p class="h1">Überschrift H1</p>
+        <p class="h2">Überschrift H2</p>
+        <p class="h3">Überschrift H3</p>
+        <p class="h4">Überschrift H4</p>
+        <p class="h5">Überschrift H5</p>
+        <p class="h6">Überschrift H6</p>
+        <!-- 
+            Da ein H1-Tag in einem HTML-Dokument nur einmal verwendet werden soll,
+            kann durch die Bootstrap-Klasse eine gleiche Formatierung dargestellt werden
+        -->
+
+        <br><br><br>
+
+        <h2>Display headings:</h2>
+        <br>
+    
+        <h1 class="display-1">Display Überschrift 1</h1>
+        <h1 class="display-2">Display Überschrift 2</h1>
+        <h1 class="display-3">Display Überschrift 3</h1>
+        <h1 class="display-4">Display Überschrift 4</h1>
+        <h1 class="display-5">Display Überschrift 5</h1>
+        <h1 class="display-6">Display Überschrift 6</h1>
+
+        <br><br><br>
+
+        <h2>Lead:</h2>
+        <br>
+
+        <p class="lead">
+            Dies ist ein Paragraph mit der Klasse 'lead'.
+        </p>
+
+        <p>
+            Dies ist ein normaler Paragraph.
+        </p>
+
+        <br><br><br>
+
+        <h2>Textdekoration mit HTML-Tags</h2>
+        <br>
+
+        <p>In diesem Text wird ein <mark>highlight</mark> gesetzt.</p>
+        <p><del>Dieser Text ist durchgestrichen</del></p>
+        <p><s>Diese Textzeile soll als nicht mehr zutreffend behandelt werden.</s></p>
+        <p><ins>Diese Textzeile ist als Ergänzung zum Dokument zu behandeln.</ins></p>
+        <p><u>Dieser Text ist unterstrichen</u></p>
+        <p><small>Dieser Text wird 'klein' geschrieben.</small></p>
+        <p><strong>Dieser Text wird 'fett' geschrieben.</strong></p>
+        <p><em>Dieser Text wird 'kursiv' geschrieben.</em></p>
+
+        <br><br><br>
+
+        <h2>Abbreviation (Abkürzung)</h2>
+        <br>
+
+        <p><abbr title="attribute">attr</abbr></p>
+        <p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr></p>
+
+        <br><br><br>
+
+        <h2>Listen</h2>
+        <br>
+
+        <!-- Normale unsortierte Liste -->
+        <ul>
+            <li>Blau</li>
+            <li>Rot</li>
+            <li>Gelb</li>
+            <li>Grün</li>
+        </ul>
+
+        <!-- Normale sortierte Liste -->
+        <ol>
+            <li>Blau</li>
+            <li>Rot</li>
+            <li>Gelb</li>
+            <li>Grün</li>
+        </ol>
+
+        <!--
+            list-unstyled gilt immer nur für die unmitelbar untergordneten Elemente.
+            Für verschachtelte Listen muss die Klasse neu gesetzt werden.
+        -->
+        <ul class="list-unstyled"> <!-- Ungestylte Liste -->
+            <li>Blau</li>
+            <li>Rot</li>
+            <li>Gelb</li>
+            <li>Grün</li>
+            <ul>
+                <li>Lila</li>
+                <li>Rosa</li>
+            </ul>
+        </ul>
+
+        <ul class="list-inline">
+            <li class="list-inline-item">Blau</li>
+            <li class="list-inline-item">Rot</li>
+            <li class="list-inline-item">Gelb</li>
+            <li class="list-inline-item">Grün</li>
+        </ul>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>

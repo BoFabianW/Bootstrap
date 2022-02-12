@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <title>Collapse</title>
+</head>
+<body>
+
+    <h1>Collapse und Dropdown</h1>
+    <br>
+
+    <div class="container mt-4"> <!-- mt-4 = margin-top mit Wert 4 -->
+        <h1>Collapse Demo (Button)</h1>
+
+        <!-- 1. btn                         = Formatiert das Design des Buttons 
+             2. btn-primary                 = Definiert die Buttonfarbe ( blau )
+             3. data-bs-toggle="collapse"   = Gibt an, dass das Element auf- und zugeklappt werden soll
+             4. data-bs-target              = Gibt das Zielelement an, welches auf- und zugeklappt werden soll 
+        -->
+        <button class="btn btn-primary mb-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDiv">Collapse Button</button>
+
+        <!-- collapse   = Klappt das Element standardmäßig zu -->
+        <div class="collapse border" id="collapseDiv"> <!-- id = id des Elementes -->
+            <p class="p-3 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus accusamus totam quisquam eligendi aperiam, amet dolorum suscipit! Earum, in ducimus? Blanditiis ab labore placeat illo quas debitis, quo provident, delectus necessitatibus consectetur quod tempore culpa enim, fugit atque consequatur. Recusandae ut, quidem laborum, debitis in, rem accusamus deserunt reprehenderit magnam et possimus soluta optio! Assumenda placeat natus beatae similique soluta!</p>
+        </div>
+        <!-- Die Angabe von margin und padding beeinträchtigt die Funktionalität von collapse-Elementen -->
+    </div>
+
+    <div class="container mt-4"> <!-- mt-4 = margin-top mit Wert 4 -->
+        <h1>Collapse Demo (Link)</h1>
+
+        <!-- Bei einem Link kann auf data-bs-target verzichtet werden und wird durch href ersetzt -->
+        <a class="mb-4 d-inline-block" data-bs-toggle="collapse" href="#collapseDiv2">Collapse Link</a>
+
+        <div class="collapse border" id="collapseDiv2">
+            <p class="p-3 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus accusamus totam quisquam eligendi aperiam, amet dolorum suscipit! Earum, in ducimus? Blanditiis ab labore placeat illo quas debitis, quo provident, delectus necessitatibus consectetur quod tempore culpa enim, fugit atque consequatur. Recusandae ut, quidem laborum, debitis in, rem accusamus deserunt reprehenderit magnam et possimus soluta optio! Assumenda placeat natus beatae similique soluta!</p>
+        </div>
+    </div>
+
+    <div class="container mt-4"> <!-- mt-4 = margin-top mit Wert 4 -->
+        <h1>Collapse Demo (Button)</h1>
+
+        <button class="btn btn-info mb-4" data-bs-toggle="collapse" data-bs-target="#collapseDiv3">Collapse Button</button>
+
+        <div class="collapse" id="collapseDiv3">
+           <img src="image/03.jpg" class="w-100"> <!-- w-100 = 100% Breite -->
+        </div>
+    </div>
+
+    <br>
+    <h1>Dropdown</h1>
+    <br>
+
+    <div class="container">
+        <!--
+            Dreht das Symbol in die jeweilige Richtung und Klappt das dropdown-menu dementsprechend aus 
+        
+            Gültige Klassen sind:
+            dropdown    = unten - standard
+            dropup      = oben
+            dropstart   = links
+            dropend     = rechts 
+        -->
+        <div class="dropdown">
+            <!--
+                1. dropdown-toggle              = Zeigt das Symbol für das Dropdownmenü an
+                2. data-bs-toggle="dropdown"    = Klappt Dropdown-Menü ein und aus
+            -->
+            <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">
+              Dropdown button
+            </button>
+            <!--
+                dropdown-menu = Formatiert das dropdown-Element und blendet es standardmäßig aus 
+                und gibt an, welches Listelement angesprochen werden soll.
+                
+                Innerhalb eines Containera kann es nur eine Liste mit der Klasse dropdown-menu geben!
+            -->
+            <ul class="dropdown-menu"> <!-- dropdown-menu kann nur in ul-, ol- oder a-Tags verwendet werden -->
+              
+              <!-- dropdown-item = Formatiert den Listeneintrag -->
+              <li><a class="dropdown-item" href="#">Listeneintrag 1</a></li>
+              <li><a class="dropdown-item" href="#">Listeneintrag 2</a></li>
+              <li><a class="dropdown-item" href="#">Listeneintrag 3</a></li>
+              <li><a class="dropdown-item" href="#">Listeneintrag 4</a></li>
+              <li><a class="dropdown-item" href="#">Listeneintrag 5</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br>
+
+    <div class="container">
+        <div class="dropup">
+            <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+              Dropup button
+            </button>
+           
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Listeneintrag 1</a></li>
+              <li><a class="dropdown-item" href="#">Listeneintrag 2</a></li>
+              <li><a class="dropdown-item" href="#">Listeneintrag 3</a></li>
+              <li><a class="dropdown-item" href="#">Listeneintrag 4</a></li>
+              <li><a class="dropdown-item" href="#">Listeneintrag 5</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br>
+
+    <div class="container">
+        <div class="dropstart">
+            <button class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown">
+              Dropstart button
+            </button>
+           
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Listeneintrag 1</a></li>
+              <li><a class="dropdown-item" href="#">Listeneintrag 2</a></li>
+              <li><a class="dropdown-item" href="#">Listeneintrag 3</a></li>
+              <li><a class="dropdown-item" href="#">Listeneintrag 4</a></li>
+              <li><a class="dropdown-item" href="#">Listeneintrag 5</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br>
+
+    <div class="container">
+        <div class="dropend">
+            <button class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown">
+              Dropend button
+            </button>
+           
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Listeneintrag 1</a></li>
+              <li><a class="dropdown-item" href="#">Listeneintrag 2</a></li>
+              <li><a class="dropdown-item" href="#">Listeneintrag 3</a></li>
+              <li><a class="dropdown-item active" href="#">Listeneintrag 4</a></li> <!-- active markiert den Eintrag -->
+              <li><a class="dropdown-item" href="#">Listeneintrag 5</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
